@@ -1,73 +1,68 @@
-# React + TypeScript + Vite
+<div align="center">
+  <img src="public/dashboard.png" alt="GlobalAdmit AI Dashboard" width="100%" style="border-radius: 12px; margin-bottom: 2rem;" />
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+  <h1>🌍 GlobalAdmit AI</h1>
+  <p><strong>A secure digital hub designed to track real-time study abroad progress and authenticate complex documents globally.</strong></p>
+  
+  <p>
+    <a href="#features">Features</a> •
+    <a href="#biometric-security-gate">Security</a> •
+    <a href="#document-verification-pipeline">Pipeline</a> •
+    <a href="#tech-stack">Tech Stack</a>
+  </p>
+</div>
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚀 The Vision
 
-## React Compiler
+The **Student Application & Document Verification System** is completely built to bypass standard "cloud drives". Evaluated on strict security constraints, this platform executes automated authenticity verifications, dynamic document matrices, and local encrypted caching for international study-abroad applicants.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 🖼️ Intelligent Chat Interface
+<img src="public/chat.png" alt="Chat Interface" width="100%" style="border-radius: 12px; margin-top: 1rem; margin-bottom: 2rem;" />
 
-## Expanding the ESLint configuration
+A lightning-fast AI consultant powered by Google Gemini 2.5 Flash, tuned specifically as a Study Abroad & Visa Admission expert. It answers live inquiries about international student visa deadlines, tuition proofs, and complex policy protocols for the US, UK, Canada, and Germany. 
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### 🛡️ Secure Document Verification Pipeline
+<img src="public/scanner.png" alt="Document Scanner" width="100%" style="border-radius: 12px; margin-top: 1rem; margin-bottom: 2rem;" />
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+Upload documents and let the platform's heuristics engine take over. The Document Verifier performs multi-layered data authenticity validation:
+1. **Hash Verification:** It inspects underlying file bytes to verify genuine PDF structure and block spoofed screen grabs.
+2. **Missing Document Triggers:** Reconciles uploaded files against the official live matrix for the selected Country. Triggers persistent Alert Center notifications if files are missing.
+3. **Certified Dossier Export:** Finalizes the packet with an approval probability score and allows compilation into an encrypted dossier.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+---
+
+## 🔥 Key Features
+
+- **Biometric UI Simulation:** A stunning, CSS-animated simulated biometric scanner (matching provided constraints) unlocking the document verifier.
+- **IndexedDB Asynchronous Storage:** Uploaded files persist seamlessly across browser tab reloads straight onto the local hardware via `IndexedDB`, with zero external cloud upload.
+- **Micro-Animated Grid Architecture:** Bento-box Dashboard with dynamically inflating nodes tracking the state of your application pipeline.
+- **Dynamic Theming:** Deeply customized UI tokens spanning beautiful dark modes, glass-panel frosted refractions, and kinetic glows.
+
+## 🛠 Tech Stack
+- **Frontend Framework:** React 18, Vite, TypeScript
+- **Styling:** Vanilla CSS 3 (Deep Custom Properties & Keyframes)
+- **Database:** IndexedDB (Native Browser Blob Storage)
+- **AI Core:** Google Gemini 2.5 Flash API
+- **Icons Elements:** Lucide-React
+
+## 📦 Running Locally
+
+```bash
+# Clone the repository
+git clone https://github.com/itzzharshil/Student-Application-and-Varification.git
+
+# Navigate into directory
+cd study-abroad-chatbot
+
+# Install dependencies
+npm install
+
+# Start Local Dev Server
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+> **Hackathon Ready:** Built for speed, deep UI evaluation, and rigorous system logic.
